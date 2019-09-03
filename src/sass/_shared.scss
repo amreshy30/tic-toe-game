@@ -1,0 +1,71 @@
+@import './fonts';
+
+// sizes
+$md: 768px;
+$lg: 992px;
+
+//colors
+$alabaster: #faf9f9;
+$bastille: #17151d;
+$black: #000000;
+$heathrow-purple: #462170;
+$dark-blue: #0c2c4c;
+$dark-shadow: rgba(0, 0, 0, 0.8);
+$hover-gray: #737373;
+$hover-green: #49bf9d;
+$light-blue: #3488f5;
+$white: #ffffff;
+
+// fonts
+$roboto-regular: 'RobotoRegular';
+$roboto-medium: 'RobotoMedium';
+$roboto-light: 'RobotoLight';
+
+a {
+  text-decoration: none;
+}
+
+@mixin box-shadow {
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56),
+    0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+@mixin card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+@mixin card-item {
+  @include box-shadow;
+
+  background-color: $bastille;
+  border-radius: 3px;
+  color: $alabaster;
+  margin: 0 15px 15px;
+  overflow: hidden;
+  transition: all 0.3s;
+  text-decoration: none;
+  width: 300px;
+
+  &:hover {
+    background-color: $hover-gray;
+  }
+}
+
+@mixin card-item-img {
+  @include box-shadow;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  height: 300px;
+  width: 100%;
+}
+
+@mixin card-item-title {
+  font-family: $roboto-medium;
+  height: 75px;
+}
